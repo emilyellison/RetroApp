@@ -1,5 +1,13 @@
 <h1>Teams</h1>
 
+<p><%= link_to 'Add a team', new_team_url %></p>
+
+<ul>
 <% @teams.each do |team| %>
+	<li>
 	<%= link_to team.name, team_url(team) %>
+	| <%= link_to 'Edit', edit_team_url(team) %>
+	| <%= link_to 'Destroy', team_url(team), method: :delete, data: { confirm: 'Are you sure you want to delete your team?' } %>
+	</li>
 <% end %>
+</ul>
