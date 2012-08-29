@@ -3,3 +3,5 @@
 <p><%= link_to "Edit #{@team.name}", edit_team_url(@team) %></p>
 
 <h2>Retros</h2>
+
+<%= render 'retros/retros', retros: @team.retros %>

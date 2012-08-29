@@ -1,14 +1,5 @@
 <h1>Retros</h1>
 
-<table>
-	<tr>
-		<th>Capture Date</th>
-		<th>Team</th>
-	</tr>
-	<% @retros.each do |retro| %>
-		<tr>
-			<td><%= link_to retro.created_at, retro_url(retro) %></td>
-			<td><%= link_to retro.team.name, team_url(retro.team) %></td>
-		</tr>
-	<% end %>
-</table>
+<p><%= link_to 'Add a Retro' %></p>
+
+<%= render 'retros/retros', retros: @retros %>
