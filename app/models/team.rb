@@ -3,4 +3,5 @@ class Team < ActiveRecord::Base
   
   has_many :retros
   validates :name, presence: true
+  
 end

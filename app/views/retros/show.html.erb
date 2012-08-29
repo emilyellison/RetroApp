@@ -1,0 +1,6 @@
+<h1><%= @retro.created_at %></h1>
+
+<p><%= link_to 'Delete this Retro', retro_url(@retro), method: :delete, data: { confirm: 'Are you sure you want to delete this retro?' } %></p>
+
+<p>Team: <%= @retro.team.name %></p>
+<p>Sprint: #<%= @retro.sprint %></p>

@@ -1,8 +1,4 @@
-<% if @team.errors.any? %>
-	<% @team.errors.full_messages.each do |msg| %>
-		<p><%= msg %>.</p>
-	<% end %>
-<% end %>
+<%= render 'shared/error_messages', item: @team %>
 
 <%= form_for @team do |f| %>
 	<%= f.label :name %>
