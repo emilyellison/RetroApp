@@ -4,3 +4,12 @@
 
 <p>Team: <%= @retro.team.name %></p>
 <p>Sprint: #<%= @retro.sprint %></p>
+
+<% @categories.each do |category| %>
+	<p><%= category.name %></p>
+	<ul>
+		<% @retro.notes.where(category_id: category.id).each do |note| %>
+			<li><%= note.description %></li>
+		<% end %>
+	</ul>
+<% end %>

@@ -16,6 +16,7 @@ class RetrosController < ApplicationController
   
   def show
     @retro = Retro.find(params[:id])
+    @categories = Category.all
   end
   
   def edit

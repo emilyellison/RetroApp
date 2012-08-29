@@ -1,9 +1,9 @@
-<h1><%= @team.name %></h1>
-
-<p><%= link_to "Edit #{@team.name}", edit_team_url(@team) %></p>
-
-<p><%= link_to 'Add a Retro', retros_url(team_id: @team.id), method: :post %></p>
-
+<div class='row'>
+	<div class='span12'>
+		<h1 class='pull-left'><%= @team.name %></h1>
+		<p class='pull-right'><%= link_to 'Add a Retro', retros_url(team_id: @team.id), method: :post, class: 'btn btn-primary' %></p>
+	</div>
+</div>
 <h2>Retros</h2>
 
 <%= render 'retros/retros', retros: @team.retros %>

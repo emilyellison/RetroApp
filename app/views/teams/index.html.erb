@@ -1,7 +1,9 @@
-<h1>Teams</h1>
-
-<p><%= link_to 'Add a Team', new_team_url %></p>
-
+<div class='row'>
+	<div class='span12'>
+		<h1 class='pull-left'>Teams</h1>
+		<p class='pull-right'><%= link_to 'Add a Team', new_team_url, class: 'btn btn-primary' %></p>
+	</div>
+</div>
 <ul>
 <% @teams.each do |team| %>
 	<li>

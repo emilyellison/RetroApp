@@ -5,5 +5,5 @@
 	<%= f.collection_select :team_id, Team.all, :id, :name %>
 	<%= f.label :sprint, 'Sprint #' %>
 	<%= f.text_field :sprint %>
-	<%= f.submit %>
+	<%= f.submit, 'Save', class: 'btn btn-primary' %>
 <% end %>
