@@ -1,0 +1,13 @@
+<p><%= @retro.team.name %> Retrospective</p>
+
+<%= render 'retros/form' %>
+
+<% @categories.each do |category| %>
+	<p><%= category.name %></p>
+	<%= render 'notes/form', category: category, retro: @retro %>
+	<ul id='<%= category.name.downcase %>_notes'>
+		<% @notes.where(category_id: category.id).each do |note| %>
+			<%= render 'notes/note', note: note %>
+		<% end %>
+	</ul>
+<% end %>

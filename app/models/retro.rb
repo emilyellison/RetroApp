@@ -5,6 +5,5 @@ class Retro < ActiveRecord::Base
   has_many :notes
   
   validates :team_id, presence: true
-  validates :sprint, presence: true
   
 end

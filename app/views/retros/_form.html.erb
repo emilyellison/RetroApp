@@ -1,9 +1,9 @@
 <%= render 'shared/error_messages', item: @retro %>
 
 <%= form_for @retro do |f| %>
-	<%= f.label :sprint %>
-	<%= f.text_field :sprint %>
 	<%= f.label :team_id %>
 	<%= f.collection_select :team_id, Team.all, :id, :name %>
+	<%= f.label :sprint, 'Sprint #' %>
+	<%= f.text_field :sprint %>
 	<%= f.submit %>
 <% end %>

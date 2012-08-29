@@ -2,6 +2,8 @@
 
 <p><%= link_to "Edit #{@team.name}", edit_team_url(@team) %></p>
 
+<p><%= link_to 'Add a Retro', retros_url(team_id: @team.id), method: :post %></p>
+
 <h2>Retros</h2>
 
 <%= render 'retros/retros', retros: @team.retros %>

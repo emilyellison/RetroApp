@@ -1,0 +1,5 @@
+$('#<%= @note.category.name.downcase %>_notes').append($("<%= escape_javascript(render @note, note: @note) %>").fadeIn('slow'));
+
+$("#new_<%= @note.category.name.downcase %>_note").each (function(){
+  this.reset();
+});
