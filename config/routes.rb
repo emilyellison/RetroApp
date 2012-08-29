@@ -1,9 +1,9 @@
 RetroApp::Application.routes.draw do
 
-  root to: 'teams#show'
+  root to: 'teams#index'
 
   resources :teams
   resources :retros
-  resources :notes [ :create, :destroy ]
+  resources :notes, only: [ :create, :destroy ]
 
 end
